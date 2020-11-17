@@ -5,6 +5,8 @@ html, body {
     padding: 0;
     height: 100%;
     width: 100%;
+    font-family: 'Fira Sans';
+    background: url(../images/wild-sea.png);
 }
 
 .d-flex {
@@ -21,11 +23,4 @@ html, body {
 }
 .grid {
     display: grid;
-}
-
-main {
-    max-width: 800px;
-    width: 92%;
-    text-align: center;
-    margin: 0 auto;
 }
