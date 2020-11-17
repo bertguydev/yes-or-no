@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <main class="d-flex justify-content-center flex-column align-items-center">
+            <h1>{{ title }}</h1>
+            <p>{{ prompt }}</p>
+            <div class="action">
+                <button @click=decideOutcome()>{{ button }}</button>
+                <button @click=reset()>Reset</button>
+            </div>
+            <p id="theResult">{{ result }}</p>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                title: 'Lucky 7s Yes or No',
+                button: 'Get Answer',
+                prompt: 'Ask Your Question Out Loud Then Hit "Get Answer"',
+                result: ''
+            },
+            methods: {
+                decideOutcome: function(){
+                    var answer = ( Math.round(Math.random() * 777 ))
+                    if(answer > 400){
+                        app.result = 'Yes'
+                    }else{
+                        app.result = 'No'
+                    }
+                },
+                reset: function(){
+                    app.result = ''
+                }
+            }
+        });
+    </script>
+</body>
+</html>
