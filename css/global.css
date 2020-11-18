@@ -1,0 +1,32 @@
+/* Global */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  line-height: 1.2358;
+  font-family: "Fira Sans";
+  background: url(../images/wild-sea.png);
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+}
+
+/*# sourceMappingURL=global.css.map */

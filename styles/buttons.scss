@@ -1,0 +1,19 @@
+.result {
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background: #33c100;
+    color: #fff;
+}
+.result:hover {
+    background: rgb(4, 155, 11);
+    cursor: pointer;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+

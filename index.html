@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucky 7s Yes or No</title>
-    <link rel="stylesheet" href="styles/style.scss">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div id="app">
         <main class="d-flex justify-content-center flex-column align-items-center">
-            <h1>{{ title }}</h1>
+            <h1><span class="lucky">{{ title }}</span> Yes or No</h1>
             <p>{{ prompt }}</p>
             <div class="action">
-                <button @click=decideOutcome()>{{ button }}</button>
-                <button @click=reset()>Reset</button>
+                <button class="result" v-if="!reset" @click=decideOutcome() v-on:click="reset = !reset">{{ button }}</button>
+                <button class="reset" v-if="reset" @click=resetData() v-on:click="reset = !reset">Ask Another Question</button>
             </div>
             <p id="theResult">{{ result }}</p>
         </main>
@@ -23,9 +23,10 @@
         var app = new Vue({
             el: '#app',
             data: {
-                title: 'Lucky 7s Yes or No',
+                title: 'Lucky 7s',
                 button: 'Get Answer',
                 prompt: 'Ask Your Question Out Loud Then Hit "Get Answer"',
+                reset: false,
                 result: ''
             },
             methods: {
@@ -37,7 +38,7 @@
                         app.result = 'No'
                     }
                 },
-                reset: function(){
+                resetData: function(){
                     app.result = ''
                 }
             }
