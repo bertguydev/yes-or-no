@@ -3,12 +3,22 @@
     padding: 10px 20px;
     border-radius: 5px;
     border: none;
-    background: #33c100;
+    background: $green;
     color: #fff;
 }
+
 .result:hover {
-    background: rgb(4, 155, 11);
+    background: $darkGreen;
     cursor: pointer;
+}
+
+.reset {
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background: $orange;
+    color: #fff;
 }
 
 *, *:before, *:after {

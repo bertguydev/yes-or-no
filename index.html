@@ -9,11 +9,18 @@
 <body>
     <div id="app">
         <main class="d-flex justify-content-center flex-column align-items-center">
-            <h1><span class="lucky">{{ title }}</span> Yes or No</h1>
+            <div class="lucky">{{ title }}</div>
+            <h1>Yes or No</h1>
             <p>{{ prompt }}</p>
             <div class="action">
                 <button class="result" v-if="!reset" @click=decideOutcome() v-on:click="reset = !reset">{{ button }}</button>
                 <button class="reset" v-if="reset" @click=resetData() v-on:click="reset = !reset">Ask Another Question</button>
+            </div>
+            <div class="yes-result" v-if="result === 'Yes'">
+                <img src="images/yes/yes-borat.gif" alt="">
+            </div>
+            <div class="no-result" v-if="result === 'No'">
+                <img src="images/no/no-bugs.gif" alt="">
             </div>
             <p id="theResult">{{ result }}</p>
         </main>

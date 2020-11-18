@@ -1,33 +1,17 @@
-#app {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
+/* Error: Undefined variable.
+ *    ,
+ * 28 |     border-bottom: 1px solid $orange;
+ *    |                              ^^^^^^^
+ *    '
+ *   styles\main.scss 28:30  root stylesheet */
 
-main {
-  max-width: 800px;
-  width: 92%;
-  text-align: center;
-  margin: 0 auto;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px #d65016;
-  padding: 3rem 0;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    \2577 \a 28 \2502      border-bottom: 1px solid $orange;\d\a    \2502                               ^^^^^^^\a    \2575 \a   styles\\main.scss 28:30  root stylesheet";
 }
-
-h1 {
-  color: #ff8300;
-  font-size: 5rem;
-}
-
-.lucky {
-  font-family: "DM Serif Display", serif;
-  color: #33c100;
-}
-
-p {
-  font-size: 24px;
-}
-
-/*# sourceMappingURL=main.css.map */
