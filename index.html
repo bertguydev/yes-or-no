@@ -17,10 +17,10 @@
                 <button class="reset" v-if="reset" @click=resetData() v-on:click="reset = !reset">Ask Another Question</button>
             </div>
             <div class="yes-result" v-if="result === 'Yes'">
-                <img src="images/yes/yes-borat.gif" alt="">
+                <img :src="lastMeme" alt="">
             </div>
             <div class="no-result" v-if="result === 'No'">
-                <img src="images/no/no-bugs.gif" alt="">
+                <img :src="lastMeme" alt="">
             </div>
             <p id="theResult">{{ result }}</p>
         </main>
@@ -36,15 +36,22 @@
                 noPhotos: ["arnold", "bugs", "duck", "hill", "man"],
                 yesPhotos: ["bill", "borat", "brian", "girl", "thor"],
                 reset: false,
-                result: ''
+                result: '',
+                memeResult: '',
+                lastMeme: '',
             },
             methods: {
                 decideOutcome: function(){
                     var answer = ( Math.round(Math.random() * 777 ))
+                    var photoChoice = ( Math.floor(Math.random() * 5 ))
                     if(answer > 400){
                         app.result = 'Yes'
+                        app.lastMeme = 'images/yes/yes-' + app.yesPhotos[photoChoice] + '.gif'
+                        console.log(app.lastMeme)
                     }else{
                         app.result = 'No'
+                        app.lastMeme = 'images/no/no-' + app.noPhotos[photoChoice] + '.gif'
+                        console.log(app.lastMeme)
                     }
                 },
                 resetData: function(){
