@@ -33,7 +33,7 @@
                 title: 'Lucky 7s',
                 button: 'Get Answer',
                 prompt: 'Ask Your Question Out Loud Then Hit "Get Answer"',
-                noPhotos: ["arnold", "bugs", "duck", "hill", "man"],
+                noPhotos: ["arnold", "bugs", "duck", "hillary", "man"],
                 yesPhotos: ["bill", "borat", "brian", "girl", "thor"],
                 reset: false,
                 result: '',
@@ -46,11 +46,11 @@
                     var photoChoice = ( Math.floor(Math.random() * 5 ))
                     if(answer > 400){
                         app.result = 'Yes'
-                        app.lastMeme = 'images/yes/yes-' + app.yesPhotos[photoChoice] + '.gif'
+                        app.lastMeme = 'images/yes/' + app.yesPhotos[photoChoice] + '.gif'
                         console.log(app.lastMeme)
                     }else{
                         app.result = 'No'
-                        app.lastMeme = 'images/no/no-' + app.noPhotos[photoChoice] + '.gif'
+                        app.lastMeme = 'images/no/' + app.noPhotos[photoChoice] + '.gif'
                         console.log(app.lastMeme)
                     }
                 },
