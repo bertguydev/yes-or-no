@@ -42,3 +42,22 @@ p {
 img {
     max-width: 100%;
 }
+
+.yes-result {
+    img {
+        box-shadow: 0 1px 30px #26da01;
+        border-radius: 16px;
+        margin: 15px 0 0;
+    }
+}
+
+.no-result {
+    img {
+        box-shadow: 0 1px 30px #da4d01;
+        border-radius: 16px;
+        margin: 15px 0 0;
+    }
+}
+button:hover {
+    cursor: pointer;
+}
