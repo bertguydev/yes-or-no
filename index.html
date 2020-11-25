@@ -9,8 +9,8 @@
 <body>
     <div id="app">
         <main class="d-flex justify-content-center flex-column align-items-center">
-            <div class="lucky">{{ title }}</div>
-            <h1>Yes or No</h1>
+            <img src="images/lucky7-yes-or-no.png" alt="Lucky7s Yes or No">
+            <h1>Get Your Yes or No Answer</h1>
             <p>{{ prompt }}</p>
             <div class="action">
                 <button class="result" v-if="!reset" @click=decideOutcome() v-on:click="reset = !reset">{{ button }}</button>
